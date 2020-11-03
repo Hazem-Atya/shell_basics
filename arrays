@@ -1,0 +1,3 @@
+#!/bin/sh
+names=(hazem safa youssef)
+echo ${names[0]}

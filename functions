@@ -1,0 +1,21 @@
+#!/bin/sh
+
+#definir une fonction 
+
+sayHello () {
+	echo "Hello world $1 et $2"
+        return 21
+
+}
+
+#appeler la fonction 
+sayHello Hazem Safa
+sayHello "Sihem" 'Jamel'
+
+#capture value returned by the last commmand
+r=$?
+
+echo "Return value is $r"
+
+# remove the definition of the function from the shell
+unset -f sayHello

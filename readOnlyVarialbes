@@ -1,0 +1,7 @@
+#!/bin/sh
+
+NAME="Zara Ali"
+readonly NAME
+NAME="Qadiri"
+
+#this script will cause an error : read only variable

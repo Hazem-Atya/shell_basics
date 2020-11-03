@@ -1,0 +1,37 @@
+#!/bin/sh
+a=5
+b=7
+
+# if elif else  
+
+if [ $a -gt $b ]
+then
+   echo "$a > $b"
+elif [ $a -lt $b ]
+then
+   echo "$a < $b"
+else
+   echo "$a==$b"
+fi
+
+# case esac
+echo "Ecrire le numéro du jour de la semaine "
+read day
+case $day in 
+1) echo "Lundi"
+	;;
+2) echo "Mardi"
+	;;
+3) echo "Mercredi"
+	;;
+4) echo "Jeudi"
+	;;
+5) echo "Vendredi"
+	;;
+6) echo "Samedi"
+	;;
+7) echo "Dimanche"
+	;;
+*) echo "Erreur , le numéro du jour doit etre entre 1 et 7"
+	;;
+esac

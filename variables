@@ -1,0 +1,4 @@
+#! /bin/sh
+VAR1="Hazem Atya"
+VAR2=100
+echo $VAR1

@@ -1,0 +1,21 @@
+#!/bin/bash
+names=(hazem safa youssef)
+# declaration li fou9 matemshi ken fil bash , ilbe9i yemshi fil kol normalement
+
+
+names[3]="Siheme"
+names[4]="Jamel"
+
+echo ${names[0]}
+
+#to access all elements of the table
+
+#first method
+echo "Premiere méthode"
+echo ${names[*]}
+
+#second method
+echo "deuxieme méthode"
+echo ${names[@]}
+
+

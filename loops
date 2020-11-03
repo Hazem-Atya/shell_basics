@@ -1,0 +1,82 @@
+#!/bin/sh
+
+
+
+echo "--------------------while loop---------------"
+a=0
+
+while [ $a -lt 10 ]
+do 
+  echo -n "$a  "
+  a=`expr $a + 1`
+done
+echo 
+
+
+echo "---------------------for loop------------------"
+
+for var in 0 2 4 6 8 10
+do 
+  echo -n $var" "
+done
+echo 
+
+echo "-----------useful for loop--------------"
+
+for file in /home/hazem/Desktop/*
+do
+  echo $file
+done
+
+
+echo "-----------------until loop------------------"
+
+i=0
+until [ ! $i -lt 10 ]
+do 
+  echo -n "$i  "
+  i=`expr $i + 1`
+done
+echo 
+
+
+echo "------------------break and continue -------------------"
+i=0
+while true
+do
+  
+  if [ $i -eq 3 ]
+  then
+      i=`expr $i + 1`
+      continue  # continue when we reach 3
+  fi
+  echo -n $i" "
+  if [ $i -eq 10 ]
+  then
+     break  # breaks when we reach 10
+  fi
+  i=`expr $i + 1`
+done
+echo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

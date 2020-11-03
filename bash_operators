@@ -1,0 +1,102 @@
+#!/bin/bash
+
+#--------------REMARQUE IMPORTANTE-----------------
+#les opérations dans ce fichier dans spécifiques au shell bash 
+
+#affectation
+
+((a=5))
+((b=8))
+#incrémentation
+((a++))
+echo $a
+
+#décrémentation
+((a--))
+echo $a 
+
+#somme
+((c=$a+$b))
+echo "$a + $b = $c"
+
+#soustraction 
+((c=$a-$b))
+echo "$a - $b= $c"
+
+#multiplication 
+((c=$a*$b))
+echo "$a * $b = $c"
+
+#modulo 
+((c=$a%$b))
+echo "$a % $b = $c"
+
+# puissance
+x=2
+n=3
+((c=x**n))
+echo "$x puissance $n = $c"
+
+echo "--------------------Logical operators-------------------------"
+a=2
+b=5
+if (($a>$b))
+then 
+    echo "$a is greater than $b"
+elif (($a==$b))
+then
+    echo "$a is equal to $b"
+elif (($a<$b))
+then
+    echo "$a is less than $b "
+fi
+
+#test multiple
+note=-1
+
+if (( ($note>0) && ($note<10) ))
+then 
+    echo "Redoublant"
+elif (( $note>=10 && $note<=20 ))
+then
+    echo "Reussi"
+else
+    echo "Erreur , la note doit etre entre 0 et 20 "
+fi
+
+# || 
+a=7
+b=5
+
+if (( $a==5 || $b== 5))
+then 
+   echo "a or b is equal to 5 "
+else
+   echo "neither a nor b is equal to 5"
+fi
+
+if (($a!=0))
+then
+   echo "$a !=0"
+fi
+
+#------------------------ while loop--------------------
+
+i=0
+
+while (($i<10))
+do
+  echo -n "$i  " # echo -n fait un affichage sans retour à la ligne 
+  ((i++))
+done
+
+
+
+
+
+
+
+
+
+
+
